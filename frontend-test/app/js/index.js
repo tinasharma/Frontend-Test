@@ -142,7 +142,7 @@ function callApi() {
 
     var distance = document.createElement('div');
     distance.setAttribute("id", "distance");
-    distance.innerHTML = array[i].distance;
+    distance.innerHTML = array[i].distance + ' mi';
     location.appendChild(distance);
 
     //since image is not coming in, used the same image for all forms
