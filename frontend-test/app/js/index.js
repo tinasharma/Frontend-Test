@@ -109,6 +109,63 @@ function callApi() {
       coupons: [
       {
       title: "$78 OFF CENTRAL PNEUMATIC 1/2 Twin Hammer Air Impact Wrench"
+      },
+      {
+      title: "50% OFF CHICAGO ELECTRIC Mig-Flux Welding Cart"
+      },
+      {
+      title: "$341 OFF CENTRAL PNEUMATIC Air Compressor"
+      },
+      {
+      title: "60% OFF PITTSBURGH 7-pc. Ratcheting Combination Wrench sets"
+      },
+      {
+      title: "$78 OFF CENTRAL PNEUMATIC 1/2&quot; Twin Hammer Air Impact Wrench"
+      },
+      {
+      title: "$140 OFF Bunker Hill Security 8 Channel Surveillance DVR"
+      },
+      {
+      title: "20% OFF any single item"
+      },
+      {
+      title: "$40 OFF 30&quot; Service Cart with Locking Drawer"
+      },
+      {
+      title: "$60 OFF CEN-TECH Digital Inspection Camera with Recorder"
+      },
+      {
+      title: "Up to 89% OFF Liquidation sale"
+      },
+      {
+      title: "70% OFF HaulMaster 40&quot; x 72&quot; Mover's Blanket"
+      },
+      {
+      title: "$75 OFF PITTSBURGH RAPID PUMP Heavy Duty Floor Jack"
+      },
+      {
+      title: "$79 OFF drillmaster 18 Volt 3/8&quot; Drill/Driver & Flashlight Kit"
+      },
+      {
+      title: "59% OFF PITTSBURGH 32-pc. Screwdriver set"
+      },
+      {
+      title: "49% OFF Haul Master 1000 lb. Capacity Swing-Back Trailer Jack"
+      },
+      {
+      title: "$132 OFF Electric Winch with Remote Control & Automatic Brake"
+      },
+      {
+      title: "59% OFF drillmaster 3/8&quot; Reversible Drill"
+      },
+      {
+      title: "65% OFF drillmaster 18 Volt Cordless 3/8&quot; Drill/Driver"
+      },
+      {
+      title: "$235 OFF WINDSOR DESIGN 60&quot; 4 Drawer Hardwood Workbench"
+      },
+      {
+      title: "83% OFF PITTSBURGH 16 oz. Hammers"
       }
       ]
     }
@@ -163,8 +220,24 @@ function callApi() {
 
     var table = document.createElement('table');
     form.appendChild(table);
-    for (var j=0; j< array[i].coupons.length; j++) {
+    if(array[i].coupons.length < 2) {
+      for (var j=0; j < array[i].coupons.length; j++) {
+        var tr = document.createElement('tr');
+        table.appendChild(tr);
+        var firstColumn = tr.appendChild(document.createElement('td'));
+        firstColumn.setAttribute("id", "first-column");
+        firstColumn.innerHTML = '<h2>' + array[i].coupons[j].title + '</h2>';
+        table.appendChild(firstColumn);
+
+        var secondColumn = tr.appendChild(document.createElement('td'));
+        secondColumn.setAttribute("id", "second-column");
+        secondColumn.innerHTML = '<h2>&gt;</h2>';
+        table.appendChild(secondColumn);
+      }
+    }
+    if (array[i].coupons.length > 2) {
       var tr = document.createElement('tr');
+      table.appendChild(tr);
       var firstColumn = tr.appendChild(document.createElement('td'));
       firstColumn.setAttribute("id", "first-column");
       firstColumn.innerHTML = '<h2>' + array[i].coupons[j].title + '</h2>';
@@ -174,8 +247,14 @@ function callApi() {
       secondColumn.setAttribute("id", "second-column");
       secondColumn.innerHTML = '<h2>&gt;</h2>';
       table.appendChild(secondColumn);
-    }
 
+      var tr = document.createElement('tr');
+      table.appendChild(tr);
+      var seeAll = tr.appendChild(document.createElement('td'));
+      seeAll.setAttribute("id", "see-all");
+      seeAll.innerHTML = '<h1>See All ' + '<button>4</button>' + '</h1>';
+      table.appendChild(seeAll);
+    }
   }
 }
 
