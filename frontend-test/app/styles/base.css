@@ -1,6 +1,8 @@
 body {
-  margin-top: 20px;
-  margin-right: -4px;
+  width: 50%
+  margin-top: 0px;
+  margin-right: 100px;
+  /*margin-right: -4px;*/
   margin-bottom: 40px;
   margin-left: 0px;
   display: inline-block;
@@ -8,53 +10,64 @@ body {
   font-family: 'Open Sans',Helvetica,Arial,sans-serif;
   color: #4d4d4d;
 }
-#pin {
+
+#logo {
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #097ab3;
+}
+
+.location {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.pin {
   float: left;
 }
-/*#city {
-  float:middle;
-}*/
 
-#distance {
-  position: relative;
-}
-/*#location > #pin {
+.city {
   float: left;
 }
 
-#location > h3 {
-  float:right;
-}*/
+.distance {
+  float: right;
+}
 
-#form {
+img.img-size {
+  width: 750px;
+}
+.form {
   float:left;
   border-style: solid;
-  /*margin-top: 0px;
-  margin-right: -4px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  display: inline-block;
-  vertical-align: top;*/
+  width: 750px;
+  vertical-align: top;
+  margin-left: 25px;
+  margin-right: 0px;
+  margin-top: 25px;
   border-width:2px;
   border-style:ridge;
   border-color: #708090;
   border-radius: 8px;
 }
 
-/*h1, h3 {
-  font-family: 'Open Sans',Helvetica,Arial,sans-serif;
-  color: #4d4d4d;
+h1 {
+  font-size: 4em;
 }
-*/
+
+h3 {
+    color: #808080;
+}
+
 #title {
   text-align: center;
 }
 
-#description{
+.description{
   text-align: center;
 }
 
-#description-form {
+.description-form {
   float: center;
   text-align: center;
   color: #FFFFFF;
@@ -66,14 +79,43 @@ body {
   border-color: #097ab3;
 }
 
-#info {
+.relative {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 25px;
+  z-index: 1;
+  border-style:ridge;
+  border-radius: 8px;
+  border-color: white;
+}
+
+table {
+  margin-top: 25px;
   margin-right: 25px;
   margin-left: 25px;
 }
 
+td {
+  border-top: 1px solid #808080;
 
+}
+.first-column {
+  width: 550px;
+}
 
+.second-column {
+  font-size: 2em;
+}
 
+.see-all {
+  text-align: center;
+  font-size: 0.5em;
+  color: #097ab3;
+}
 
-
-
+button {
+  background-color: #097ab3;
+  font-size: 0.5em;
+  border-radius: 25px;
+  color: white;
+}
