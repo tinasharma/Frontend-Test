@@ -2,7 +2,6 @@ body {
   width: 50%
   margin-top: 0px;
   margin-right: 100px;
-  /*margin-right: -4px;*/
   margin-bottom: 40px;
   margin-left: 0px;
   display: inline-block;
@@ -33,11 +32,39 @@ body {
 .distance {
   float: right;
 }
+#location {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
+#pin {
+  float: left;
+}
+
+#city {
+  float: left;
+}
+
+#distance {
+  float: right;
+}
 img.img-size {
   width: 750px;
 }
 .form {
+  float:left;
+  border-style: solid;
+  width: 750px;
+  vertical-align: top;
+  margin-left: 25px;
+  margin-right: 0px;
+  margin-top: 25px;
+  border-width:2px;
+  border-style:ridge;
+  border-color: #708090;
+  border-radius: 8px;
+}
+#form {
   float:left;
   border-style: solid;
   width: 750px;
@@ -63,11 +90,25 @@ h3 {
   text-align: center;
 }
 
-.description{
+.category {
+  text-align: center;
+}
+#category {
   text-align: center;
 }
 
-.description-form {
+.businessname {
+  float: center;
+  text-align: center;
+  color: #FFFFFF;
+  border-style:ridge;
+  background-color: #097ab3;
+  margin-right: 25px;
+  margin-left: 25px;
+  border-radius: 8px;
+  border-color: #097ab3;
+}
+#businessname {
   float: center;
   text-align: center;
   color: #FFFFFF;
@@ -80,6 +121,15 @@ h3 {
 }
 
 .relative {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 25px;
+  z-index: 1;
+  border-style:ridge;
+  border-radius: 8px;
+  border-color: white;
+}
+#relative {
   position: absolute;
   margin-top: 200px;
   margin-left: 25px;
@@ -112,7 +162,19 @@ td {
   font-size: 0.5em;
   color: #097ab3;
 }
+#first-column {
+  width: 550px;
+}
 
+#second-column {
+  font-size: 2em;
+}
+
+#see-all {
+  text-align: center;
+  font-size: 0.5em;
+  color: #097ab3;
+}
 button {
   background-color: #097ab3;
   font-size: 0.5em;
